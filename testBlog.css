@@ -1,0 +1,12 @@
+/* Styles for the header section */
+header {
+  display: flex; /* Puts items in a row (horizontal layout) */
+  align-items: center; /* Vertically aligns items */
+  gap: 10px; /* Space between image and text */
+}
+
+/* Styles the logo image */
+header img {
+  width: 50px; /* You can adjust this to your preference */
+  height: auto; /* Keeps image ratio */
+}
