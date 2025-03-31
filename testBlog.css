@@ -77,3 +77,56 @@ nav button:hover {
 nav button:hover::after {
   width: 100%; /* Fully expands the line from left to right */
 }
+/* Style the entire table */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Removes space between borders */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Caption styling */
+caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Header cells (Sun-Sat) */
+thead th {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Table body cells (days) */
+tbody td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  height: 60px;
+  vertical-align: top;
+}
+
+/* Light background for weekends */
+tbody td:nth-child(1), /* Sunday */
+tbody td:nth-child(7)  /* Saturday */ {
+  background-color: #fff8f0;
+}
+
+/* Optional: style empty cells */
+tbody td:empty {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect */
+tbody td:hover {
+  background-color: #ffe4d4;
+  cursor: pointer;
+}
+
+/* Optional: highlight current day (if manually added with a class) */
+.today {
+  background-color: #ffb085;
+  font-weight: bold;
+  border: 2px solid #ff6a00;
+}

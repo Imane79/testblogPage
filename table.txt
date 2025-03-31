@@ -1,0 +1,68 @@
+🧩 1. <table> — The Container
+
+<table>
+  ...
+</table>
+
+-This is the main wrapper that holds everything.
+-Everything related to the calendar (headers, rows, cells) goes inside here.
+
+📌 2. <caption> — The Title of the Table
+
+<caption>March 2025</caption>
+
+-Gives the table a visible title (like a heading).
+-It appears above the table by default.
+
+🧠 3. <thead> — The Days of the Week (Header Row)
+<thead>
+  <tr>
+    <th>Sun</th>
+    <th>Mon</th>
+    <th>Tue</th>
+    <th>Wed</th>
+    <th>Thu</th>
+    <th>Fri</th>
+    <th>Sat</th>
+  </tr>
+</thead>
+
+-<thead> is for the header section of the table.
+-<tr> means “table row.”
+-Inside the row, we use <th> (table header) for each day of the week.
+
+📅 4. <tbody> — The Calendar Days (All the Weeks)
+<tbody>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td>1</td>
+  </tr>
+
+-<tbody> holds all the calendar rows.
+-Each <tr> is a week.
+-Each <td> is a day cell.
+
+🕳️ 5. Empty <td></td> — Blank Days Before Month Starts
+In March 2025, the 1st is on a Saturday, so the week starts with 6 empty days:
+<tr>
+  <td></td><td></td><td></td><td></td><td></td><td></td><td>1</td>
+</tr>
+🔁 6. More Rows for the Rest of the Month
+<tr>
+  <td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+</tr>
+
+-These continue to fill each week row with dates.
+-Each row = one calendar week.
+
+🧱 Summary Structure
+<table>
+  <caption>March 2025</caption>   <!-- Table title -->
+  <thead>                         <!-- Days of the week -->
+    <tr><th>Sun</th> ... </tr>
+  </thead>
+  <tbody>                         <!-- Each row = 1 week -->
+    <tr><td></td>...<td>1</td></tr>  <!-- First week starts Saturday -->
+    <tr><td>2</td>...<td>8</td></tr> <!-- Next week -->
+    ...
+  </tbody>
+</table>
