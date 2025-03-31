@@ -67,11 +67,10 @@ nav button::after {
 
 /* Hover effect: triggers underline, lift, and color change */
 nav button:hover {
-  background-color: coral; /* Optional: adds a colored background when hovered */
   transform: translateY(
     -3px
   ); /* Moves the button slightly up (gives a "lift" effect) */
-  color: white; /* Changes the text color */
+  color: coral; /* Changes the text color */
 }
 
 /* Expands the underline on hover */
