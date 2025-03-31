@@ -10,3 +10,11 @@ header img {
   width: 50px; /* You can adjust this to your preference */
   height: auto; /* Keeps image ratio */
 }
+
+nav button {
+  padding: 8px 16px; /* Adds space inside the button (top/bottom: 8px, left/right: 16px) */
+  font-size: 16px; /* Sets the text size to be readable and consistent */
+  border: none; /* Removes the default border around buttons */
+  background-color: transparent; /* Removes the browser's default button background */
+  cursor: pointer; /* Changes the cursor to a pointer on hover (indicates it's clickable) */
+}
