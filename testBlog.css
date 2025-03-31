@@ -18,3 +18,63 @@ nav button {
   background-color: transparent; /* Removes the browser's default button background */
   cursor: pointer; /* Changes the cursor to a pointer on hover (indicates it's clickable) */
 }
+/* nav button:hover {
+  text-decoration: underline;
+  color: coral; /* change the font color   */
+/* transform: translateY(-3px);
+  transition: all 0.2s ease; */
+/* } */
+/* nav button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: salmon;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+nav button:hover::after {
+  width: 100%;
+} */
+/* position: relative; on the parent element is required 
+when using ::after with position: absolute; */
+/* Style for all buttons inside the <nav> */
+nav button {
+  padding: 8px 16px; /* Adds space inside the button (top/bottom: 8px, left/right: 16px) */
+  font-size: 16px; /* Makes the text readable and consistent */
+  border: none; /* Removes the browser's default border */
+  border-radius: 5px; /* Slightly rounds the corners of the button */
+  background-color: transparent; /* Removes the default background color */
+  color: inherit; /* Inherits the text color from the parent element (nav) */
+  cursor: pointer; /* Changes the mouse cursor to a pointer on hover (indicates it's clickable) */
+  position: relative; /* Needed so the ::after underline is positioned relative to this button */
+  transition: all 0.3s ease; /* Smoothly animates changes like transform, color, and background */
+}
+
+/* Pseudo-element to create an animated underline */
+nav button::after {
+  content: ""; /* Empty content — just creates a visual line */
+  position: absolute; /* Positions this line inside the button */
+  bottom: 0; /* Anchors the line to the bottom of the button */
+  left: 0; /* Start from the left edge */
+  height: 2px; /* Thickness of the underline */
+  background-color: currentColor; /* Uses the same color as the button text */
+  width: 0; /* Hidden by default — we'll animate this on hover */
+  transition: width 0.3s ease; /* Smoothly expands the underline width when hovered */
+}
+
+/* Hover effect: triggers underline, lift, and color change */
+nav button:hover {
+  background-color: coral; /* Optional: adds a colored background when hovered */
+  transform: translateY(
+    -3px
+  ); /* Moves the button slightly up (gives a "lift" effect) */
+  color: white; /* Changes the text color */
+}
+
+/* Expands the underline on hover */
+nav button:hover::after {
+  width: 100%; /* Fully expands the line from left to right */
+}
